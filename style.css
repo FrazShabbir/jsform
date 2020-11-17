@@ -15,13 +15,13 @@
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 30px;
   color: #777;
-  background: #4CAF50!important;
+  /* background: #4CAF50!important; */
 }
 
-.container {
+.container2 {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;

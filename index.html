@@ -13,7 +13,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">  
+        <div class="container2">  
             <form id="contact" onsubmit="return false">
               <h3 class="text-center">Contact Form</h3>
               <h4 class="text-center">Contact us for custom quote</h4>
@@ -28,6 +28,12 @@
               </fieldset>
               <fieldset>
                 <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input id="rolno2" placeholder="Batch CODE" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input id="rolno3" placeholder="Serial number " type="text" tabindex="4" required>
               </fieldset>
               <fieldset>
                 <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" required>
@@ -51,7 +57,7 @@
 <div class="container">
   <h2>Basic Table</h2>
   <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
-  <table class="table">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Name</th>
@@ -63,78 +69,78 @@
       <tr>
           <td>CGPS</td>
         <td>CurrentCGPS</td>
-        <td ><p id="set1">hello</p></td>
+        <td ><p id="set1"></p></td>
       </tr>
       <tr>
         <td>RN</td>
         <td>Roll Number</td>
-        <td></td>
+        <td><p id="set2"></p></td>
         
       </tr>
       <tr>
         <td>BC</td>
         <td>Batch Code</td>
-        <td></td>
+        <td><p id="set3"></p></td>
       </tr>
        <tr>
         <td>RNS</td>
         <td>Roll number serial</td>
-        <td></td>
+        <td><p id="set4"></p></td>
       </tr>
        <tr>
         <td>BC_Sum</td>
         <td>Batch Code Sum</td>
-        <td></td>
+        <td><p id="set5"></p></td>
       </tr>
        <tr>
         <td>RNS_SUM</td>
         <td>RNS digit sum</td>
-        <td></td>
+        <td><p id="set6"></p></td>
       </tr>
        <tr>
         <td>RNS_SUM</td>
         <td>BC_Sum + RNS_SUM</td>
-        <td></td>
+        <td><p id="set7"></p></td>
       </tr>
        <tr>
         <td>NAME_F_ASCCII_U</td>
         <td>ASCII value of your names first letter(upper)</td>
-        <td></td>
+        <td><p id="set8"></p></td>
       </tr>
        <tr>
         <td>NAME_F_ASCCII_L</td>
         <td>ASCII value of your names first letter(lower)</td>
-        <td></td>
+        <td><p id="set9"></p></td>
       </tr>
        <tr>
         <td>S_ASCII</td>
         <td>Section_letter with ASCII value</td>
-        <td></td>
+        <td><p id="set10"></p></td>
       </tr>
        <tr>
         <td>G_TAG</td>
         <td>Presentation Group TAG @ LMS</td>
-        <td></td>
+        <td><p id="set11"></p></td>
       </tr>
        <tr>
         <td>G_TAG_ASSCII</td>
         <td>ASCII Value of G_tag</td>
-        <td></td>
+        <td><p id="set12"></p></td>
       </tr>
         <tr>
             <td>AVG_CGPA_GROUP</td>
         <td>Group members Average CGPA(M1 +M2 + M3)/3</td>
-        <td></td>
+        <td><p id="set13"></p></td>
         </tr>
           <tr>
             <td>ASCII_NAME_UPPER</td>
         <td>sum of ASCII value of lower case name </td>
-        <td></td>
+        <td><p id="set14"></p></td>
       </tr>
           <tr>
             <td>ASCII_NAME_LOWER</td>
         <td>sum of ASCII value of upper case name </td>
-        <td></td>
+        <td><p id="set15"></p></td>
       </tr>
     </tbody>
   </table>
@@ -157,8 +163,36 @@
     var m1       =   document.getElementById("m1").value;
     var m2       =   document.getElementById("m2").value;
     var m3       =   document.getElementById("m3").value;
-    document.getElementById("lname").value=m3;
-    document.getElementById("set1").innerHTML =fname;
+    var num1 = ~~document.getElementById("rolno2").value;
+
+    document.getElementById("set1").innerHTML =cgpa;
+    document.getElementById("set2").innerHTML =rolno;
+    var BC = rolno.slice(0, 8);
+    var RNS = rolno.slice(9, 12);
+     document.getElementById("set3").innerHTML =BC;
+     document.getElementById("set4").innerHTML =RNS;
+
+
+      // var BC_2 =parseInt(BC);
+
+     var BC_Sum=0;
+       for (i = 0; i < 9; i++) {
+         temp=rolno2.slice(i,i+1);
+        BC_Sum=BC_Sum+temp;
+             }
+       document.getElementById("set5").innerHTML =BC_Sum;
+
+
+     
+
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    // document.getElementById("set1").innerHTML =cgpa;
+    
 });
 </script>
     </body>
