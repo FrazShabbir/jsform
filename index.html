@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">  
-            <form id="contact" onsubmit="return myFunction()">
+            <form id="contact" onsubmit="return false">
               <h3 class="text-center">Contact Form</h3>
               <h4 class="text-center">Contact us for custom quote</h4>
               <fieldset>
@@ -24,26 +24,26 @@
                 <input id="lname"placeholder="Last Name LOWER CASE"  type="text" tabindex="2" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="Section" type="text" tabindex="3" required>
+                <input id="section" placeholder="Section" type="text" tabindex="3" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="Roll Number" type="text" tabindex="4" required>
+                <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="CGPA" type="text" tabindex="4" required>
+                <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="Group Member 1 CGPS" type="text" tabindex="4" required>
+                <input id="m1" placeholder="Group Member 1 CGPS" type="text" tabindex="4" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="Group Member 2 CGPS" type="text" tabindex="4" required>
+                <input id="m2" placeholder="Group Member 2 CGPS" type="text" tabindex="4" required>
               </fieldset>
               <fieldset>
-                <input id="" placeholder="Group Member 3 CGPS" type="text" tabindex="4" required>
+                <input id="m3" placeholder="Group Member 3 CGPS" type="text" tabindex="4" required>
               </fieldset>
+              
               <fieldset>
-                <input id="" type="submit"> 
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                <button name="submit"  onclick="myFunction()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
               </fieldset>
             </form>
           </div>
@@ -63,7 +63,7 @@
       <tr>
           <td>CGPS</td>
         <td>CurrentCGPS</td>
-        <td></td>
+        <td id="set1"></td>
       </tr>
       <tr>
         <td>RN</td>
@@ -142,10 +142,23 @@
 
 
 <script>
-    function myFunction() {
-    var age = document.getElementById("fname").value;
-    document.getElementById("lname").value=age;
-    }
+    // function myFunction() {
+    // var age = document.getElementById("fname").value;
+    // document.getElementById("lname").value=age;
+    // document.getElementById("set1").value=age;
+    
+    // }
+    $("form").submit(function(){
+    var fname    =   document.getElementById("fname").value;
+    var lname    =   document.getElementById("lname").value;
+    var section  =   document.getElementById("section").value;
+    var rolno    =   document.getElementById("rolno").value;
+    var cgpa     =   document.getElementById("cgpa").value;
+    var m1       =   document.getElementById("m1").value;
+    var m2       =   document.getElementById("m2").value;
+    var m3       =   document.getElementById("m3").value;
+    document.getElementById("lname").value=m3;
+});
 </script>
     </body>
 </html>
