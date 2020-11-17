@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">  
+            <form id="contact" action="" method="post" onsubmit="return myFunction()">
+              <h3 class="text-center">Contact Form</h3>
+              <h4 class="text-center">Contact us for custom quote</h4>
+              <fieldset>
+                <input id="fname"placeholder="First Name (UPPER CASE)" type="text" tabindex="1" required autofocus>
+              </fieldset>
+              <fieldset>
+                <input id="lname"placeholder="Last Name LOWER CASE"  type="text" tabindex="2" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Section" type="text" tabindex="3" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Roll Number" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="CGPA" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Group Member 1 CGPS" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Group Member 2 CGPS" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Group Member 3 CGPS" type="text" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input type="submit" value="Submit"> 
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Detail</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>CGPS</td>
+        <td>CurrentCGPS</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>RN</td>
+        <td>Roll Number</td>
+        <td></td>
+        
+      </tr>
+      <tr>
+        <td>BC</td>
+        <td>Batch Code</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>RNS</td>
+        <td>Roll number serial</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>BC_Sum</td>
+        <td>Batch Code Sum</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>RNS_SUM</td>
+        <td>RNS digit sum</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>RNS_SUM</td>
+        <td>BC_Sum + RNS_SUM</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>NAME_F_ASCCII_U</td>
+        <td>ASCII value of your names first letter(upper)</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>NAME_F_ASCCII_L</td>
+        <td>ASCII value of your names first letter(lower)</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>S_ASCII</td>
+        <td>Section_letter with ASCII value</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>G_TAG</td>
+        <td>Presentation Group TAG @ LMS</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>G_TAG_ASSCII</td>
+        <td>ASCII Value of G_tag</td>
+        <td></td>
+      </tr>
+        <tr>
+            <td>AVG_CGPA_GROUP</td>
+        <td>Group members Average CGPA(M1 +M2 + M3)/3</td>
+        <td></td>
+        </tr>
+          <tr>
+            <td>ASCII_NAME_UPPER</td>
+        <td>sum of ASCII value of lower case name </td>
+        <td></td>
+      </tr>
+          <tr>
+            <td>ASCII_NAME_LOWER</td>
+        <td>sum of ASCII value of upper case name </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+    function myFunction() {
+    var age = document.getElementById("fname").value;
+    document.getElementById("lname").value=age;
+    }
+</script>
+    </body>
+</html>
