@@ -18,34 +18,34 @@
               <h3 class="text-center">Contact Form</h3>
               <h4 class="text-center">Contact us for custom quote</h4>
               <fieldset>
-                <input id="fname"placeholder="First Name (UPPER CASE)" type="text" tabindex="1" required autofocus>
+                <input id="fname"placeholder="First Name (UPPER CASE)" type="text" tabindex="1"  autofocus>
               </fieldset>
               <fieldset>
-                <input id="lname"placeholder="Last Name LOWER CASE"  type="text" tabindex="2" required>
+                <input id="lname"placeholder="Last Name LOWER CASE"  type="text" tabindex="2" >
               </fieldset>
               <fieldset>
-                <input id="section" placeholder="Section" type="text" tabindex="3" required>
+                <input id="section" placeholder="Section" type="text" tabindex="3" >
               </fieldset>
               <fieldset>
-                <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" required>
+                <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="rolno2" placeholder="Batch CODE" type="text" tabindex="4" required>
+                <input id="rolno2" placeholder="Batch CODE" type="number" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="rolno3" placeholder="Serial number " type="text" tabindex="4" required>
+                <input id="rolno3" placeholder="Serial number " type="number" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" required>
+                <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="m1" placeholder="Group Member 1 CGPS" type="text" tabindex="4" required>
+                <input id="m1" placeholder="Group Member 1 CGPS" type="text" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="m2" placeholder="Group Member 2 CGPS" type="text" tabindex="4" required>
+                <input id="m2" placeholder="Group Member 2 CGPS" type="text" tabindex="4" >
               </fieldset>
               <fieldset>
-                <input id="m3" placeholder="Group Member 3 CGPS" type="text" tabindex="4" required>
+                <input id="m3" placeholder="Group Member 3 CGPS" type="text" tabindex="4" >
               </fieldset>
               
               <fieldset>
@@ -163,7 +163,9 @@
     var m1       =   document.getElementById("m1").value;
     var m2       =   document.getElementById("m2").value;
     var m3       =   document.getElementById("m3").value;
-    var num1 = ~~document.getElementById("rolno2").value;
+
+    var num1 =      parseInt(  document.getElementById("rolno2").value);
+    var num2 =      parseInt(  document.getElementById("rolno3").value);
 
     document.getElementById("set1").innerHTML =cgpa;
     document.getElementById("set2").innerHTML =rolno;
@@ -172,15 +174,29 @@
      document.getElementById("set3").innerHTML =BC;
      document.getElementById("set4").innerHTML =RNS;
 
+    var value = num1,
+    sum = value
+        .toString()
+        .split('')
+        .map(Number)
+        .reduce(function (a, b) {
+            return a + b;
+        }, 0);
 
-      // var BC_2 =parseInt(BC);
+      document.getElementById("set5").innerHTML =sum;
 
-     var BC_Sum=0;
-       for (i = 0; i < 9; i++) {
-         temp=rolno2.slice(i,i+1);
-        BC_Sum=BC_Sum+temp;
-             }
-       document.getElementById("set5").innerHTML =BC_Sum;
+      var value2 = num2,
+      sum2 = value2
+        .toString()
+        .split('')
+        .map(Number)
+        .reduce(function (a, b) {
+            return a + b;
+        }, 0);
+
+      document.getElementById("set6").innerHTML =sum2;
+      document.getElementById("set7").innerHTML =sum2+sum;
+
 
 
      
