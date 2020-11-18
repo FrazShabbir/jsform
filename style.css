@@ -18,11 +18,11 @@ body {
   font-size: 20px;
   line-height: 30px;
   color: #777;
-  background: #757a76!important;
+  background: #4CAF50!important;
 }
 
 .container2 {
-  max-width: 50%;
+  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -99,7 +99,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #cacfca;
+  background: #4CAF50;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
@@ -107,7 +107,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: #444944!important;
+  background: #43A047!important;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -144,8 +144,8 @@ fieldset {
 }
 
 .tab-dec{
-  border:2px solid #43A047;
-  background-color: #fff;
+  border:2px solid #448044;
+  background-color: #FFF;
   
 }
 tbody{
