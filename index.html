@@ -13,51 +13,61 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container2">  
-            <form id="contact" onsubmit="return false">
-              <h3 class="text-center">Contact Form</h3>
-              <h4 class="text-center">Contact us for custom quote</h4>
-              <fieldset>
-                <input id="fname"placeholder="Name" type="text" tabindex="1"  autofocus>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="container2">  
+              <form id="contact" onsubmit="return false">
+                <h3 class="text-center">Contact Form</h3>
+                <h4 class="text-center">Contact us for custom quote</h4>
+                <fieldset>
+                  <input id="fname"placeholder="Name" type="text" tabindex="1"  autofocus>
+                </fieldset>
+                <fieldset>
+                  <input id="ptag"placeholder="Presentation Tag"  type="text" tabindex="2" >
+                </fieldset>
+                <fieldset>
+                  <input id="section" placeholder="Section" type="text" tabindex="3" >
+                </fieldset>
+                <fieldset>
+                  <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="rolno2" placeholder="Batch CODE" type="number" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="rolno3" placeholder="Serial number " type="number" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="m1" placeholder="Group Member 1 CGPS" type="text" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="m2" placeholder="Group Member 2 CGPS" type="text" tabindex="4" >
+                </fieldset>
+                <fieldset>
+                  <input id="m3" placeholder="Group Member 3 CGPS" type="text" tabindex="4" >
+                </fieldset>
+                
+                <fieldset>
+                  <button name="submit"  onclick="myFunction()" type="submit" id="contact-submit" data-submit="...Sending" class="btn7">Submit</button>
+                </fieldset>
+                <fieldset>
+                <button class="btn1">Hide Table</button>
               </fieldset>
-              <fieldset>
-                <input id="ptag"placeholder="Presentation Tag"  type="text" tabindex="2" >
-              </fieldset>
-              <fieldset>
-                <input id="section" placeholder="Section" type="text" tabindex="3" >
-              </fieldset>
-              <fieldset>
-                <input id="rolno" placeholder="Roll Number" type="text" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="rolno2" placeholder="Batch CODE" type="number" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="rolno3" placeholder="Serial number " type="number" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="cgpa" placeholder="CGPA" type="text" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="m1" placeholder="Group Member 1 CGPS" type="text" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="m2" placeholder="Group Member 2 CGPS" type="text" tabindex="4" >
-              </fieldset>
-              <fieldset>
-                <input id="m3" placeholder="Group Member 3 CGPS" type="text" tabindex="4" >
-              </fieldset>
-              
-              <fieldset>
-                <button name="submit"  onclick="myFunction()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-              </fieldset>
-            </form>
+              </form>
+            </div>
           </div>
+        </div>
+      </div>
 
-<div class="container">
-  <h2>Basic Table</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
-  <table class="table table-hover">
+
+<div class="container" id="table-hide">
+  <div class="row">
+    <div class="col-12">          
+  <table class="table table-hover tab-dec">
     <thead>
       <tr>
         <th>Name</th>
@@ -145,9 +155,24 @@
     </tbody>
   </table>
 </div>
+</div>
+</div>
 
 
 <script>
+
+
+
+
+$(document).ready(function(){
+  $("#table-hide").hide();
+    $(".btn1").click(function(){
+    $("#table-hide").hide();
+  });
+  $(".btn7").click(function(){
+    $("#table-hide").show();
+  });
+});
   // function myFunction() {
   // var age = document.getElementById("fname").value;
   // document.getElementById("lname").value=age;
