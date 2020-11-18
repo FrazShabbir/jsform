@@ -18,10 +18,10 @@
               <h3 class="text-center">Contact Form</h3>
               <h4 class="text-center">Contact us for custom quote</h4>
               <fieldset>
-                <input id="fname"placeholder="First Name (UPPER CASE)" type="text" tabindex="1"  autofocus>
+                <input id="fname"placeholder="Name" type="text" tabindex="1"  autofocus>
               </fieldset>
               <fieldset>
-                <input id="lname"placeholder="Last Name LOWER CASE"  type="text" tabindex="2" >
+                <input id="ptag"placeholder="Presentation Tag"  type="text" tabindex="2" >
               </fieldset>
               <fieldset>
                 <input id="section" placeholder="Section" type="text" tabindex="3" >
@@ -148,67 +148,107 @@
 
 
 <script>
-    // function myFunction() {
-    // var age = document.getElementById("fname").value;
-    // document.getElementById("lname").value=age;
-    // document.getElementById("set1").value=age;
+  // function myFunction() {
+  // var age = document.getElementById("fname").value;
+  // document.getElementById("lname").value=age;
+  // document.getElementById("set1").value=age;
+  
+  // }
+  $("form").submit(function(){
+  var fname    =   document.getElementById("fname").value;
+  var ptag    =   document.getElementById("ptag").value;
+  var section  =   document.getElementById("section").value;
+  var rolno    =   document.getElementById("rolno").value;
+  var cgpa     =   document.getElementById("cgpa").value;
+  var m1       =  parseFloat( document.getElementById("m1").value);
+  var m2       =  parseFloat(  document.getElementById("m2").value);
+  var m3       =   parseFloat( document.getElementById("m3").value);
+  var num1 =      parseInt(  document.getElementById("rolno2").value);
+  var num2 =      parseInt(  document.getElementById("rolno3").value);
+
+  document.getElementById("set1").innerHTML =cgpa;
+  document.getElementById("set2").innerHTML =rolno;
+  var BC = rolno.slice(0, 8);
+  var RNS = rolno.slice(9, 12);
+   document.getElementById("set3").innerHTML =BC;
+   document.getElementById("set4").innerHTML =RNS;
+
+  var value = num1,
+  sum = value
+      .toString()
+      .split('')
+      .map(Number)
+      .reduce(function (a, b) {
+          return a + b;
+      }, 0);
+
+    document.getElementById("set5").innerHTML =sum;
+
+    var value2 = num2,
+    sum2 = value2
+      .toString()
+      .split('')
+      .map(Number)
+      .reduce(function (a, b) {
+          return a + b;
+      }, 0);
+
+    document.getElementById("set6").innerHTML =sum2;
+    document.getElementById("set7").innerHTML =sum2+sum;
+
+    var Name_F_ASCII_U=fname.toUpperCase().slice(0, 1).charCodeAt(0);
+    var Name_F_ASCII_L=fname.toLowerCase().slice(0, 1).charCodeAt(0);
+    var S_ASCII = section.toUpperCase().slice(0,1).charCodeAt(0);
+    var G_TAG=ptag.toUpperCase();
+    var G_TAG_ASSCII=ptag.toUpperCase().slice(0,1).charCodeAt(0);
+
+    document.getElementById("set8").innerHTML =Name_F_ASCII_U;
+    document.getElementById("set9").innerHTML =Name_F_ASCII_L;
+    document.getElementById("set10").innerHTML =S_ASCII;
+    document.getElementById("set11").innerHTML =G_TAG;
+    document.getElementById("set12").innerHTML =G_TAG_ASSCII;
+
+
+      var AVG_CGPA_GROUP= (m1+m2+m3)/3;
+      
+
+    document.getElementById("set13").innerHTML =AVG_CGPA_GROUP;
+
+    // var value3 = fname,
+    // sum2 = value3.toLowerCase().charCodeAt(0)
+    //   .toString()
+    //   .split('')
+    //   .map(String)
+    //   .reduce(function (a, b) {
+    //       return a + b;
+    //   }, 0);
+    var addup=0;
+       var output = fname.split('');
+       for (i = 0; i < output.length; i++){
+         test=output[i].toUpperCase().charCodeAt(0)
+         addup=addup+test;
+       }
+
+       var addup2=0;
+       var output2 = fname.split('');
+       for (i = 0; i < output2.length; i++){
+         test=output2[i].toLowerCase().charCodeAt(0)
+         addup2=addup2+test;
+       }
+
+
     
-    // }
-    $("form").submit(function(){
-    var fname    =   document.getElementById("fname").value;
-    var lname    =   document.getElementById("lname").value;
-    var section  =   document.getElementById("section").value;
-    var rolno    =   document.getElementById("rolno").value;
-    var cgpa     =   document.getElementById("cgpa").value;
-    var m1       =   document.getElementById("m1").value;
-    var m2       =   document.getElementById("m2").value;
-    var m3       =   document.getElementById("m3").value;
-
-    var num1 =      parseInt(  document.getElementById("rolno2").value);
-    var num2 =      parseInt(  document.getElementById("rolno3").value);
-
-    document.getElementById("set1").innerHTML =cgpa;
-    document.getElementById("set2").innerHTML =rolno;
-    var BC = rolno.slice(0, 8);
-    var RNS = rolno.slice(9, 12);
-     document.getElementById("set3").innerHTML =BC;
-     document.getElementById("set4").innerHTML =RNS;
-
-    var value = num1,
-    sum = value
-        .toString()
-        .split('')
-        .map(Number)
-        .reduce(function (a, b) {
-            return a + b;
-        }, 0);
-
-      document.getElementById("set5").innerHTML =sum;
-
-      var value2 = num2,
-      sum2 = value2
-        .toString()
-        .split('')
-        .map(Number)
-        .reduce(function (a, b) {
-            return a + b;
-        }, 0);
-
-      document.getElementById("set6").innerHTML =sum2;
-      document.getElementById("set7").innerHTML =sum2+sum;
+      document.getElementById("set14").innerHTML =addup;
+      document.getElementById("set15").innerHTML =addup2;
 
 
 
-     
 
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    // document.getElementById("set1").innerHTML =cgpa;
-    
+
+   
+
+ 
+  
 });
 </script>
     </body>
